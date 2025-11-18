@@ -1,17 +1,23 @@
 import React, { useState } from 'react'
 
 
-function Counter({ onChange }) {
-    let [value, setValue] = useState(0)
+function Counter({ onChange, start, limit }) {
+    let [value, setValue] = useState(start)
     function inc() {
-        setValue(value + 1)
-        if(typeof(onChange) == 'function')
-            onChange(value + 1)
+        if (value < limit) {
+            setValue(value + 1)
+            if (typeof (onChange) == 'function')
+                onChange(value + 1)
+        }
+
     }
     function dec() {
-        setValue(value - 1)
-        if(typeof(onChange) == 'function')
-            onChange(value + 1)
+        if (value > start) {
+            setValue(value - 1)
+            if (typeof (onChange) == 'function')
+                onChange(value - 1)
+        }
+
     }
     return (
         <div>
@@ -23,17 +29,17 @@ function Counter({ onChange }) {
 }
 
 export default function CustomEvents() {
-    let [parentValue,setParentValue] = useState(0)
-    
-    function handleChildChange(event){
+    let [parentValue, setParentValue] = useState(0)
+
+    function handleChildChange(event) {
         setParentValue(event)
     }
     return (
         <div>
             <h1>CustomEvents</h1>
             Current Value = {parentValue}
-            <hr/>
-            <Counter onChange={handleChildChange}/>
+            <hr />
+            <Counter start={0} limit={10} onChange={handleChildChange} />
         </div>
     )
 }

@@ -5,12 +5,13 @@ import { Button, TextField,Rating} from '@mui/material'
 import StateDemo from './StateDemo';
 import ColorChangeWithState from './ColorChangeWithState';
 import HideShow from './HideShow';
+import ToggleButton from './ToggleButton';
 
 function App() {
   const fruits = ["Mango", "Banana", "Kiwi", "Grapes"]
   return (
     <div className="App">
-      <HideShow/>
+      <ToggleButton/>
     </div>
   );
 }

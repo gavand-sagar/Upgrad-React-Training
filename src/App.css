@@ -80,3 +80,18 @@
     padding: 0 .75rem;
     white-space: nowrap;
 }
+
+.btn{
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+}
+.btn-yellow{
+  background-color: rgb(145, 141, 23);
+}
+
+.btn-orange{
+  background-color: orangered;
+}

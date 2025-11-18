@@ -7,12 +7,13 @@ import ColorChangeWithState from './ColorChangeWithState';
 import HideShow from './HideShow';
 import ToggleButton from './ToggleButton';
 import CustomAttributes from './CustomAttributes';
+import CustomEvents from './CustomEvents';
 
 function App() {
   const fruits = ["Mango", "Banana", "Kiwi", "Grapes"]
   return (
     <div className="App">
-      <CustomAttributes/>
+      <CustomEvents/>
     </div>
   );
 }

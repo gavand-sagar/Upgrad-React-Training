@@ -4,12 +4,13 @@ import './App.css';
 import { Button, TextField,Rating} from '@mui/material'
 import StateDemo from './StateDemo';
 import ColorChangeWithState from './ColorChangeWithState';
+import HideShow from './HideShow';
 
 function App() {
   const fruits = ["Mango", "Banana", "Kiwi", "Grapes"]
   return (
     <div className="App">
-      <ColorChangeWithState/>
+      <HideShow/>
     </div>
   );
 }

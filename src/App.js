@@ -1,23 +1,17 @@
-import logo from './logo.svg';
+// src/App.js
+import { AmazonButton } from './AmazonButton';
 import './App.css';
+import { Button, TextField,Rating} from '@mui/material'
 
 function App() {
+  const fruits = ["Mango", "Banana", "Kiwi", "Grapes"]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Rating value={3}/>
+      <br/>
+      <TextField label="Username"/>
+      <br/>
+      <Button variant='contained'>Login</Button>
     </div>
   );
 }

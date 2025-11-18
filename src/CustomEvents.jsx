@@ -5,11 +5,13 @@ function Counter({ onChange }) {
     let [value, setValue] = useState(0)
     function inc() {
         setValue(value + 1)
-        onChange(value + 1)
+        if(typeof(onChange) == 'function')
+            onChange(value + 1)
     }
     function dec() {
         setValue(value - 1)
-        onChange(value + 1)
+        if(typeof(onChange) == 'function')
+            onChange(value + 1)
     }
     return (
         <div>

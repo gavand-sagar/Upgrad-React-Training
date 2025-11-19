@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 
 function Counter({ onChange, start, limit }) {
@@ -6,19 +6,20 @@ function Counter({ onChange, start, limit }) {
     function inc() {
         if (value < limit) {
             setValue(value + 1)
-            if (typeof (onChange) == 'function')
-                onChange(value + 1)
         }
-
     }
+
     function dec() {
         if (value > start) {
             setValue(value - 1)
-            if (typeof (onChange) == 'function')
-                onChange(value - 1)
         }
-
     }
+
+    useEffect(() => {
+        if (typeof (onChange) == 'function')
+            onChange(value)
+    }, [value])
+
     return (
         <div>
             <button onClick={dec}>-</button>

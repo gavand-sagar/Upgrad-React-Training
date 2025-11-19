@@ -9,12 +9,13 @@ import ToggleButton from './ToggleButton';
 import CustomAttributes from './CustomAttributes';
 import CustomEvents from './CustomEvents';
 import ListAndStates from './ListAndStates';
+import UseEffectBasics from './UseEffectBasics';
 
 function App() {
   const fruits = ["Mango", "Banana", "Kiwi", "Grapes"]
   return (
     <div className="App">
-      <ListAndStates/>
+      <UseEffectBasics/>
     </div>
   );
 }

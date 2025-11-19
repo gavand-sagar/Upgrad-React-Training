@@ -12,12 +12,13 @@ import ListAndStates from './ListAndStates';
 import UseEffectBasics from './UseEffectBasics';
 import UseRefDemo from './UseRefDemo';
 import UseRefForForms from './UseRefForForms';
+import ControlledForm from './ControlledForm';
 
 function App() {
   const fruits = ["Mango", "Banana", "Kiwi", "Grapes"]
   return (
     <div className="App">
-      <UseRefForForms/>
+      <ControlledForm/>
     </div>
   );
 }

@@ -95,3 +95,8 @@
 .btn-orange{
   background-color: orangered;
 }
+
+.error{
+  border: 1px solid red;
+  outline: none;
+}

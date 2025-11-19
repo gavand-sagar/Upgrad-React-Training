@@ -13,12 +13,13 @@ import UseEffectBasics from './UseEffectBasics';
 import UseRefDemo from './UseRefDemo';
 import UseRefForForms from './UseRefForForms';
 import ControlledForm from './ControlledForm';
+import ReactHookForm from './ReactHookForm';
 
 function App() {
   const fruits = ["Mango", "Banana", "Kiwi", "Grapes"]
   return (
     <div className="App">
-      <ControlledForm/>
+      <ReactHookForm/>
     </div>
   );
 }

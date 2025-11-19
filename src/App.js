@@ -15,12 +15,13 @@ import UseRefForForms from './UseRefForForms';
 import ControlledForm from './ControlledForm';
 import ReactHookForm from './ReactHookForm';
 import ReactHookFormMUI from './ReactHookFormMUI';
+import SimpleTodoApp from './SimpleTodoApp';
 
 function App() {
   const fruits = ["Mango", "Banana", "Kiwi", "Grapes"]
   return (
     <div className="App">
-      <ReactHookFormMUI/>
+      <SimpleTodoApp/>
     </div>
   );
 }

@@ -14,12 +14,13 @@ import UseRefDemo from './UseRefDemo';
 import UseRefForForms from './UseRefForForms';
 import ControlledForm from './ControlledForm';
 import ReactHookForm from './ReactHookForm';
+import ReactHookFormMUI from './ReactHookFormMUI';
 
 function App() {
   const fruits = ["Mango", "Banana", "Kiwi", "Grapes"]
   return (
     <div className="App">
-      <ReactHookForm/>
+      <ReactHookFormMUI/>
     </div>
   );
 }

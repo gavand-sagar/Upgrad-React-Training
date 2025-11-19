@@ -10,12 +10,13 @@ import CustomAttributes from './CustomAttributes';
 import CustomEvents from './CustomEvents';
 import ListAndStates from './ListAndStates';
 import UseEffectBasics from './UseEffectBasics';
+import UseRefDemo from './UseRefDemo';
 
 function App() {
   const fruits = ["Mango", "Banana", "Kiwi", "Grapes"]
   return (
     <div className="App">
-      <UseEffectBasics/>
+      <UseRefDemo/>
     </div>
   );
 }

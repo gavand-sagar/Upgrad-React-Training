@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <nav>
         {
-          routes?.map(x => <Link to={x.path}><Button sx={{ margin: '5px' }} variant='contained'>{x.linkText}</Button></Link>)
+          routes?.filter(x => x.linkText).map(x => <Link to={x.path}><Button sx={{ margin: '5px' }} variant='contained'>{x.linkText}</Button></Link>)
         }
       </nav>
       <hr />

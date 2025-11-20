@@ -13,6 +13,7 @@ import ReactHookForm from './ReactHookForm';
 import ReactHookFormMUI from './ReactHookFormMUI';
 import SimpleTodoApp from './SimpleTodoApp';
 import ApiCallDemo from './ApiCallDemo';
+import ProductDetails from './ProductDetails';
 
 export const routes = [
     {
@@ -34,5 +35,9 @@ export const routes = [
         path: '/ApiCallDemo',
         linkText: "Api Call Demo",
         element: <ApiCallDemo />
+    },
+    {
+        path: '/ProductDetails/:productid',
+        element: <ProductDetails />
     }
 ]

@@ -2,6 +2,7 @@ import { Button, CircularProgress, Skeleton } from '@mui/material'
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { DataGrid } from '@mui/x-data-grid'
+import { Link } from 'react-router-dom'
 
 function ProductListSkeleton() {
     return <div>
@@ -39,7 +40,15 @@ export default function ApiCallDemo() {
     }
 
     const columns = [
-        { field: 'title', headerName: 'Product Name', width: 200 },
+        {
+            field: 'title',
+            headerName:
+                'Product Name',
+            width: 300,
+            renderCell: ({ row }) => {
+                return <Link to={"/ProductDetails/" + row.id}>{row.title}</Link>
+            }
+        },
         { field: 'brand', headerName: 'Brand', width: 300 },
         { field: 'price', headerName: 'Price', width: 300 },
         { field: 'description', headerName: 'Description', width: 300 },
@@ -56,6 +65,7 @@ export default function ApiCallDemo() {
                 isLoading ?
                     <ProductListSkeleton />
                     :
+                    // products.map(x => <div> <Link to={'/ProductDetails/' + x.id}>{x.title}</Link> | {x.price} | {x.brand}  </div>)
                     <DataGrid initialState={{
                         pagination: {
                             paginationModel: {
@@ -63,7 +73,7 @@ export default function ApiCallDemo() {
                             },
                         },
                     }}
-                    pageSizeOptions={[5,10,25]} columns={columns} rows={products} />
+                        pageSizeOptions={[5, 10, 25]} columns={columns} rows={products} />
             }
         </div>
     )

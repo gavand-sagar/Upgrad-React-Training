@@ -6,7 +6,7 @@ import { Link, Route, Router, Routes } from 'react-router-dom';
 import { routes } from './Routes';
 
 function App() {
- 
+
   return (
     <div className="App">
       <nav>
@@ -14,6 +14,8 @@ function App() {
           routes?.map(x => <Link to={x.path}><Button sx={{ margin: '5px' }} variant='contained'>{x.linkText}</Button></Link>)
         }
       </nav>
+      <hr />
+      <br />
       <Routes>
         {
           routes?.map(x => <Route path={x.path} element={x.element} />)

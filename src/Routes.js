@@ -12,21 +12,27 @@ import ControlledForm from './ControlledForm';
 import ReactHookForm from './ReactHookForm';
 import ReactHookFormMUI from './ReactHookFormMUI';
 import SimpleTodoApp from './SimpleTodoApp';
+import ApiCallDemo from './ApiCallDemo';
 
 export const routes = [
     {
-      path: '/StateDemo',
-      linkText: "State Demo",
-      element: <StateDemo />
+        path: '/StateDemo',
+        linkText: "State Demo",
+        element: <StateDemo />
     },
     {
-      path: '/SimpleTodoApp',
-      linkText: "Simple Todo App",
-      element: <SimpleTodoApp />
+        path: '/SimpleTodoApp',
+        linkText: "Simple Todo App",
+        element: <SimpleTodoApp />
     },
     {
-      path: '/ReactHookFormMUI',
-      linkText: "React Hook Form MUI",
-      element: <ReactHookFormMUI />
+        path: '/ReactHookFormMUI',
+        linkText: "React Hook Form MUI",
+        element: <ReactHookFormMUI />
     },
-  ]
+    {
+        path: '/ApiCallDemo',
+        linkText: "Api Call Demo",
+        element: <ApiCallDemo />
+    }
+]

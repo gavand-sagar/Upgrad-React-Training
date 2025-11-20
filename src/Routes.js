@@ -14,6 +14,7 @@ import ReactHookFormMUI from './ReactHookFormMUI';
 import SimpleTodoApp from './SimpleTodoApp';
 import ApiCallDemo from './ApiCallDemo';
 import ProductDetails from './ProductDetails';
+import LoginFormPostAPI from './LoginFormPostAPI';
 
 export const routes = [
     {
@@ -39,5 +40,9 @@ export const routes = [
     {
         path: '/ProductDetails/:productid',
         element: <ProductDetails />
+    },
+    {
+        path: '/Login',
+        element: <LoginFormPostAPI />
     }
 ]

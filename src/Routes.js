@@ -15,6 +15,7 @@ import SimpleTodoApp from './SimpleTodoApp';
 import ApiCallDemo from './ApiCallDemo';
 import ProductDetails from './ProductDetails';
 import LoginFormPostAPI from './LoginFormPostAPI';
+import ContextAPI from './ContextAPI';
 
 export const routes = [
     {
@@ -40,6 +41,11 @@ export const routes = [
     {
         path: '/ProductDetails/:productid',
         element: <ProductDetails />
+    },
+     {
+        path: '/ContextAPI',
+        linkText: "Context API",
+        element: <ContextAPI />
     },
     {
         path: '/Login',

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useSelector } from 'react-redux'
 
 // Code which will not work in react (not ideal react code)
 // export default function StateDemo() {
@@ -24,18 +25,20 @@ export default function StateDemo() {
 
   // state variable
   // react does re-render the UI if state variable changes
-  let [value,setValue] = useState(0)
+  let [value, setValue] = useState(0)
 
-  function handleClick(){
+  function handleClick() {
     let newValue = value + 1
     setValue(newValue) // this is the way to change the value
   }
 
+  let { username,city } = useSelector(store => store.user)
+
   return (
     <div>
-        <h1>StateDemo</h1>
-        <p>{value}</p>
-        <button onClick={handleClick}>Increment</button>
+      <h1>StateDemo {username} {city}</h1>
+      <p>{value}</p>
+      <button onClick={handleClick}>Increment</button>
     </div>
   )
 }

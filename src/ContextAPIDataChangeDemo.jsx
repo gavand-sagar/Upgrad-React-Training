@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState } from 'react'
+import { useSelector } from 'react-redux'
 
 let MyContext = createContext({ items: [], handleDelete: () => { } })
 
@@ -27,9 +28,13 @@ export default function ContextAPIDataChangeDemo() {
         newArray.pop()
         setItems(newArray)
     }
+    let { username} = useSelector(store => store.user)
+    let { count } = useSelector(store => store.counter)
+
     return (
         <MyContext value={{ items: items, handleDelete: handleDelete }}>
             <h1>ContextAPIDataChangeDemo</h1>
+            <p>Redux Data: {username}, {count} </p>
             <p>DATA IS HERE</p>
             <ItemsList />
         </MyContext>

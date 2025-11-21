@@ -16,6 +16,7 @@ import ApiCallDemo from './ApiCallDemo';
 import ProductDetails from './ProductDetails';
 import LoginFormPostAPI from './LoginFormPostAPI';
 import ContextAPI from './ContextAPI';
+import ContextAPIDataChangeDemo from './ContextAPIDataChangeDemo';
 
 export const routes = [
     {
@@ -46,6 +47,11 @@ export const routes = [
         path: '/ContextAPI',
         linkText: "Context API",
         element: <ContextAPI />
+    },
+     {
+        path: '/ContextAPIDataChangeDemo',
+        linkText: "Context API Data Change Demo",
+        element: <ContextAPIDataChangeDemo />
     },
     {
         path: '/Login',

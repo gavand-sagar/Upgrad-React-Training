@@ -18,6 +18,7 @@ import LoginFormPostAPI from './LoginFormPostAPI';
 import ContextAPI from './ContextAPI';
 import ContextAPIDataChangeDemo from './ContextAPIDataChangeDemo';
 import ReduxDataChange from './ReduxDataChange';
+import ApiWithRedux from './ApiWithRedux';
 
 export const routes = [
     {
@@ -58,6 +59,11 @@ export const routes = [
         path: '/ReduxDataChange',
         linkText: "ReduxDataChange",
         element: <ReduxDataChange />
+    },
+    {
+        path: '/ApiWithRedux',
+        linkText: "ApiWithRedux",
+        element: <ApiWithRedux />
     },
     {
         path: '/Login',

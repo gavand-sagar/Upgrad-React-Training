@@ -1,4 +1,5 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import axios from "axios";
 
 export const counterSlice = createSlice({
     name: 'counter',
@@ -33,3 +34,47 @@ export const userSlice = createSlice({
         city: "Mumbai"
     }
 })
+
+export const factApiCall = createAsyncThunk("", () => {
+    // return new Promise((res, rej) => {
+    //     setTimeout(() => {
+    //         res({ data: { fact: "HEY THIS IS DUMMY" } })
+    //     }, 6000)
+    // })
+    return axios.get("https://catfact.ninja/fact")
+})
+
+export const factsSlice = createSlice({
+    name: 'facts',
+    initialState: {
+        fact: "",
+        factsLoading: false
+    },
+    extraReducers: (builder) => {
+        builder.addCase(factApiCall.fulfilled, (state, action) => {
+            // set the state
+            return {
+                fact: action.payload.data.fact,
+                factsLoading: false
+            }
+        })
+
+        builder.addCase(factApiCall.rejected, (state, action) => {
+            // set the state
+            return {
+                fact: "",
+                factsLoading: false
+            }
+        })
+
+        builder.addCase(factApiCall.pending, (state, action) => {
+            // set the state
+            return {
+                fact: "",
+                factsLoading: true
+            }
+        })
+    }
+})
+
+

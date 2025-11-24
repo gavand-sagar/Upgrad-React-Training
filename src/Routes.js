@@ -20,6 +20,7 @@ import ContextAPIDataChangeDemo from './ContextAPIDataChangeDemo';
 import ReduxDataChange from './ReduxDataChange';
 import ApiWithRedux from './ApiWithRedux';
 import HOCDemo from './HOCDemo';
+import LazyLoadingDemo from './LazyLoadingDemo';
 
 export const routes = [
     {
@@ -70,6 +71,11 @@ export const routes = [
         path: '/HocDemo',
         linkText: "HOC Demo",
         element: <HOCDemo />
+    },
+    {
+        path: '/LazyLoadingDemo',
+        linkText: "Lazy Loading Demo",
+        element: <LazyLoadingDemo/>
     },
     {
         path: '/Login',

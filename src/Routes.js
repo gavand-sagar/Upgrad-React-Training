@@ -19,6 +19,7 @@ import ContextAPI from './ContextAPI';
 import ContextAPIDataChangeDemo from './ContextAPIDataChangeDemo';
 import ReduxDataChange from './ReduxDataChange';
 import ApiWithRedux from './ApiWithRedux';
+import HOCDemo from './HOCDemo';
 
 export const routes = [
     {
@@ -64,6 +65,11 @@ export const routes = [
         path: '/ApiWithRedux',
         linkText: "ApiWithRedux",
         element: <ApiWithRedux />
+    },
+    {
+        path: '/HocDemo',
+        linkText: "HOC Demo",
+        element: <HOCDemo />
     },
     {
         path: '/Login',

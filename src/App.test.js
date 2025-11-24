@@ -1,8 +1,18 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+import { addition } from './Helper'
+
+test('to check simple addition function 1,2', () => {
+  const result = addition(1, 2)
+  expect(result).toBe(3)
+});
+
+test('to check negitive addition function -1, 2', () => {
+  const result = addition(-1, 2)
+  expect(result).toBe(1)
+});
+
+
+test('to check string addition function "1", "2"', () => {
+  const result = addition("1", "2")
+  expect(result).toBe(3)
 });

@@ -16,7 +16,7 @@ export default function LoginFormPostAPI() {
 
         try {
             const response = await axios.post(
-                'https://dummyjson.com/auth/login', formData
+                process.env.REACT_APP_API_URL + '/api/auth/login', formData
             )
 
             navigate("/ApiCallDemo")
@@ -32,7 +32,7 @@ export default function LoginFormPostAPI() {
     return (
         <Box sx={{ maxWidth: 400, margin: '50px auto', padding: 3 }}>
             <Typography variant="h4" component="h1" gutterBottom>
-                Login
+                Login {process.env.REACT_APP_LOGIN_HEADING}
             </Typography>
 
             {error && (
@@ -44,14 +44,14 @@ export default function LoginFormPostAPI() {
             <form onSubmit={handleSubmit(login)}>
                 <Box sx={{ mb: 2 }}>
                     <TextField
-                        {...register("username", {
-                            required: "Username is required"
+                        {...register("email", {
+                            required: "email is required"
                         })}
-                        label="Username"
+                        label="email"
                         type="text"
                         fullWidth
-                        error={!!errors.username}
-                        helperText={errors.username?.message}
+                        error={!!errors.email}
+                        helperText={errors.email?.message}
                     />
                 </Box>
                 <Box sx={{ mb: 2 }}>
